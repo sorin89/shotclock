@@ -1,4 +1,5 @@
 import React from 'react';
+import Clock from './components/clock';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
         </p>
       </div>
       <hr className="border" />
+      <Clock/>
+      <Clock/>
     </div>
   );
 }
