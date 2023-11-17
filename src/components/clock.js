@@ -9,7 +9,7 @@ const Clock = () => {
 
     if (isRunning && seconds > 0) {
       timer = setInterval(() => {
-        setSeconds((prevSeconds) => prevSeconds - 1);
+        setSeconds((prev) => prev - 1);
       }, 1000);
     }
 
@@ -27,10 +27,10 @@ const Clock = () => {
 
   return (
     <div className="bg-gray-100 py-10">
-      <div className="text-5xl my-4">{seconds}</div>
+      <div className="text-6xl my-4 text-red-700">{seconds}</div>
       <div className="">
-        <button onClick={Pause} className='mx-2 bg-black text-white p-2 rounded-xl'>Pause</button>
-        <button onClick={Reset} className='mx-2 bg-black text-white p-2 rounded-xl'>Reset</button>
+        <button onClick={Pause} className='mx-1 bg-black text-white p-2 rounded-md'>Pause</button>
+        <button onClick={Reset} className='mx-1 bg-black text-white p-2 rounded-md'>Reset</button>
       </div>
     </div>
   );
