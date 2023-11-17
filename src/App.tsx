@@ -24,8 +24,14 @@ function App() {
         </p>
       </div>
       <hr className="border" />
-      <Clock/>
-      <Clock/>
+      <div className='flex max-w-xl mx-auto'>
+        <div className='fle flex-grow'>
+          <Clock/>
+        </div>
+        <div className='fle flex-grow'>
+          <Clock/>
+        </div>
+      </div>
     </div>
   );
 }
