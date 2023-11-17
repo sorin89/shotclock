@@ -3,11 +3,11 @@ import { PiPauseFill, PiPlayFill } from "react-icons/pi";
 import { FaSyncAlt } from "react-icons/fa";
 
 const Clock = () => {
-  const [seconds, setSeconds] = useState(24);
-  const [isRunning, setIsRunning] = useState(true);
+  const [seconds, setSeconds] = useState<number>(24);
+  const [isRunning, setIsRunning] = useState<boolean>(true);
 
   useEffect(() => {
-    let timer;
+    let timer: number | undefined;
 
     if (isRunning && seconds > 0) {
       timer = setInterval(() => {
