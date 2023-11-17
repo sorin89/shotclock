@@ -2,8 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { PiPauseFill, PiPlayFill } from "react-icons/pi";
 import { FaSyncAlt } from "react-icons/fa";
 
-const Clock = () => {
-  const [seconds, setSeconds] = useState<number>(24);
+interface ClockProps {
+  initialTime: number;
+}
+
+const Clock: React.FC<ClockProps> = ({ initialTime }) => {
+  const [seconds, setSeconds] = useState<number>(initialTime);
   const [isRunning, setIsRunning] = useState<boolean>(true);
 
   useEffect(() => {
@@ -19,7 +23,7 @@ const Clock = () => {
   }, [isRunning, seconds]);
 
   const Reset = () => {
-    setSeconds(24);
+    setSeconds(initialTime);
     setIsRunning(true);
   };
 
